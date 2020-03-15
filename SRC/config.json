@@ -1,0 +1,68 @@
+{
+  "name": "AzureGitTrigger",
+  "type": "trigger",
+  "execProgram": "node",
+  "main": "app.js",
+  "exposeRoute": true,
+  "imgUrl": "logo.png",
+  "version": "1.0.0",
+  "description": "Handle Azure Git webhooks request",
+  "methods": [
+    {
+      "name": "prWebhook",
+      "route": "post /azuregit/webhook",
+      "viewName": "Azure Git Webhook for Pull Request",
+      "params": [
+        {
+          "name": "REPO_URL",
+          "viewName": "Repository URL",
+          "type": "string"
+        },
+        {
+          "name": "TO_BRANCH",
+          "viewName": "Target branch",
+          "type": "string"
+        },
+        {
+          "name": "FROM_BRANCH",
+          "viewName": "Source branch",
+          "type": "string"
+        },
+        {
+          "name": "REQUESTED_BY",
+          "viewName": "Requested By",
+          "type": "string"
+        },
+        {
+          "name": "REVIEWER_NAME",
+          "viewName": "Reviewed By",
+          "type": "string"
+        }
+      ],
+      "actionString": "REPO_URL TO_BRANCH FROM_BRANCH"
+    },
+    {
+      "name": "pushWebhook",
+      "route": "post /azuregit/webhook1",
+      "viewName": "Azure Git Webhook for Push",
+      "params": [
+        {
+          "name": "REPO_URL",
+          "viewName": "Repository URL",
+          "type": "string"
+        },
+        {
+          "name": "PUSH_BRANCH",
+          "viewName": "Pushed Branch",
+          "type": "string"
+        },
+        {
+          "name": "PUSHED_BY",
+          "viewName": "Pushed By",
+          "type": "string"
+        }
+      ],
+      "actionString": "REPO_URL PUSH_BRANCH PUSHED_BY"
+    }
+  ]
+}
