@@ -84,22 +84,6 @@ function execTriggerPR(trigger, {push, repositoryURL, targetBranch, sourceBranch
             return reject("Not matching target branch")
         }
 
-        /**
-         * Check that Requested by provided - else - consider as any.
-         */
-        if (requestedBy.value && requestBy !== requestedBy.value) {
-            console.log(requestBy, requestedBy.value);
-            return reject("Not same Request By");
-        }
-
-        /**
-         * Check that Reviewer by provided - else - consider as any.
-         */
-        if (reviewerName.value && reviewer !== reviewerName.value) {
-            console.log(reviewer, reviewerName.value);
-            return reject("Not same Reviewer");
-        }
-        
         else {
             return resolve();
         }
@@ -137,13 +121,6 @@ function execTriggerPush(trigger, {push, repositoryURL, pushBranch, pushedBy}, i
          */
         if (triggerPushBranch.value && !minimatch(pushBranch, triggerPushBranch.value)) {
                 return reject("Not matching pushed branch")
-        }
-
-        /**
-         * Check that From branch provided - else - consider as any.
-         */
-        if (triggerPushedBy.value && pushedBy !== triggerPushedBy.value) {
-            return reject("Not matching target branch")
         }
 
         else {

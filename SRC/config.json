@@ -10,7 +10,7 @@
   "methods": [
     {
       "name": "prWebhook",
-      "route": "post /azuregit/webhook",
+      "route": "post /azuregit/webhook/pull-request",
       "viewName": "Azure Git Webhook for Pull Request",
       "params": [
         {
@@ -27,23 +27,13 @@
           "name": "FROM_BRANCH",
           "viewName": "Source branch",
           "type": "string"
-        },
-        {
-          "name": "REQUESTED_BY",
-          "viewName": "Requested By",
-          "type": "string"
-        },
-        {
-          "name": "REVIEWER_NAME",
-          "viewName": "Reviewed By",
-          "type": "string"
         }
       ],
       "actionString": "REPO_URL TO_BRANCH FROM_BRANCH"
     },
     {
       "name": "pushWebhook",
-      "route": "post /azuregit/webhook1",
+      "route": "post /azuregit/webhook/push",
       "viewName": "Azure Git Webhook for Push",
       "params": [
         {
@@ -54,11 +44,6 @@
         {
           "name": "PUSH_BRANCH",
           "viewName": "Pushed Branch",
-          "type": "string"
-        },
-        {
-          "name": "PUSHED_BY",
-          "viewName": "Pushed By",
           "type": "string"
         }
       ],
