@@ -1,17 +1,17 @@
 {
-  "name": "AzureGitTrigger",
+  "name": "VSTS-Trigger",
   "type": "trigger",
   "execProgram": "node",
   "main": "app.js",
   "exposeRoute": true,
   "imgUrl": "logo.png",
   "version": "1.0.0",
-  "description": "Handle Azure Git webhooks request",
+  "description": "Handle VSTS webhooks",
   "methods": [
     {
       "name": "prWebhook",
       "route": "post /azuregit/webhook/pull-request",
-      "viewName": "Azure Git Webhook for Pull Request",
+      "viewName": "VSTS Pull Request Webhook",
       "params": [
         {
           "name": "REPO_URL",
@@ -34,7 +34,7 @@
     {
       "name": "pushWebhook",
       "route": "post /azuregit/webhook/push",
-      "viewName": "Azure Git Webhook for Push",
+      "viewName": "VSTS Push Webhook",
       "params": [
         {
           "name": "REPO_URL",
