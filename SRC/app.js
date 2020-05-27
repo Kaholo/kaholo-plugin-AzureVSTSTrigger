@@ -1,6 +1,7 @@
 const config = require("./config");
 const mapExecutionService = require("../../../api/services/map-execution.service");
 const Trigger = require("../../../api/models/map-trigger.model");
+const minimatch = require("minimatch")
 
 module.exports = {
     prWebhook: controllerfunctionPR,
