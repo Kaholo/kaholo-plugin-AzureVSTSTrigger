@@ -1,4 +1,4 @@
-# kaholo-plugin-vsts-trigger
+# kaholo-trigger-vsts
 VSTS Trigger repo
 
 The VSTS trigger is a webhook trigger for ***Azure DevOps git*** repository. 
