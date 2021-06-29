@@ -20,16 +20,15 @@
         },
         {
           "name": "TO_BRANCH",
-          "viewName": "Target branch",
+          "viewName": "Target Branch",
           "type": "string"
         },
         {
           "name": "FROM_BRANCH",
-          "viewName": "Source branch",
+          "viewName": "Source Branch",
           "type": "string"
         }
-      ],
-      "actionString": "REPO_URL TO_BRANCH FROM_BRANCH"
+      ]
     },
     {
       "name": "pushWebhook",
@@ -46,8 +45,7 @@
           "viewName": "Pushed Branch",
           "type": "string"
         }
-      ],
-      "actionString": "REPO_URL PUSH_BRANCH PUSHED_BY"
+      ]
     }
   ]
 }
