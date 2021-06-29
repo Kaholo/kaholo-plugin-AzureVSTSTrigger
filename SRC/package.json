@@ -1,12 +1,12 @@
 {
   "name": "kaholo-plugin-azure_git_trigger",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Trigger for commiting code in Azure Git",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Ilan Yaniv",
+  "author": "Kaholo Group",
   "license": "ISC",
   "dependencies": {
     "minimatch": "^3.0.4"
